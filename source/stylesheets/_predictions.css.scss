@@ -1,0 +1,18 @@
+.predictions-content {
+  padding: 20px;
+
+  @include respond-to(small) {
+    padding: 30px;
+  }
+}
+
+.prediction-steps {
+  border-bottom: 1px solid $color-grey-light;
+  overflow: hidden;
+  padding: 20px 0;
+  max-width: 100%;
+
+  @include respond-to(small) {
+    padding: 30px 0;
+  }
+}

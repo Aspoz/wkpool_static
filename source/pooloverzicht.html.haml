@@ -1,0 +1,149 @@
+---
+title: Pool overzicht
+---
+
+
+.grid-r
+  .medium-3-4
+    .box
+      .content-header
+        %h1 Pool overzicht
+        .form-search
+          %form{:action => "#"}
+            %button.green
+              %i.fa.fa-search
+            %div
+              %input{:type => "text", :placeholder => "Zoeken..."}/
+      .pool-filter
+        .filter-handle
+          %h2 Filters
+          %i.fa.fa-caret-right.filter-arrow
+        .filter-overview
+          %form{:action => "#"}
+            .grid-r
+              .small-1-3.filter-box
+                %h3 Toegankelijkheid
+                .form-field
+                  .checkbox
+                    %input#fp1{:type => "radio", :name => "filter[public]", :checked => true}/
+                    %label{:for => "fp1"} Alle pools
+                  .checkbox
+                    %input#fp2{:type => "radio", :name => "filter[public]", :checked => false}/
+                    %label{:for => "fp2"} Openbare pools
+                  .checkbox
+                    %input#fp3{:type => "radio", :name => "filter[public]", :checked => false}/
+                    %label{:for => "fp3"} Prive pools
+              .small-1-3.filter-box
+                %h3 Volle pools
+                .form-field
+                  .checkbox
+                    %input#fvp1{:type => "radio", :name => "filter[full]", :checked => true}/
+                    %label{:for => "fvp1"} Tonen
+                  .checkbox
+                    %input#fvp2{:type => "radio", :name => "filter[full]", :checked => false}/
+                    %label{:for => "fvp2"} Verbergen
+              .small-1-3.filter-box
+                %h3 Aantal deelnemers
+                .slider
+                  .minmax
+                    .mintext
+                    %input.min{:type => "hidden", :name => "filter[min]"}/
+                    .maxtext
+                    %input.max{:type => "hidden", :name => "filter[max]"}/
+                  .rangeslider
+            .small-0.filter-submit
+              %input.btn.green.fullwidth{:type => "submit", :value => "Filters toepassen"}/
+      .pool-list
+        %ul
+          %li.private
+            .view-table
+              %a.grey.pool-list-inner.view-row{:href => "#modal", :rel => "modal:open"}
+                .pool-list-img
+                  %img{:src => "images/missing.png", :alt => "plaatje"}/
+                .pool-list-txt
+                  %h2 The Next Web Leeuwarden
+                  %p 15/35
+                .pool-list-lock
+                  %i.fa.fa-lock.lock
+          %li.public
+            .view-table
+              %a.grey.pool-list-inner.view-row{:href => "#modal2", :rel => "modal:open"}
+                .pool-list-img
+                  %img{:src => "images/missing.png", :alt => "plaatje"}/
+                .pool-list-txt
+                  %h2 Peter &amp; Friends
+                  %p 15/35
+                .pool-list-lock
+                  %i.fa.fa-unlock.lock
+          %li.private
+            .view-table
+              %a.grey.pool-list-inner.view-row{:href => "#"}
+                .pool-list-img
+                  %img{:src => "images/missing.png", :alt => "plaatje"}/
+                .pool-list-txt
+                  %h2 The Next Web Leeuwarden
+                  %p 15/35
+                .pool-list-lock
+                  %i.fa.fa-lock.lock
+          %li.public
+            .view-table
+              %a.grey.pool-list-inner.view-row{:href => "#"}
+                .pool-list-img
+                  %img{:src => "images/missing.png", :alt => "plaatje"}/
+                .pool-list-txt
+                  %h2 Peter &amp; Friends
+                  %p 15/35
+                .pool-list-lock
+                  %i.fa.fa-unlock.lock
+      .pagination
+        .pages
+          .view-row
+            %div.prev
+              %a.btn.grey{:href => "#"}
+                %i.fa.fa-chevron-left
+                %span.text Vorige
+            .page-btns
+              %a.btn.grey{:href => "#"} 1
+              %a.btn.green{:href => "#"} 2
+              %a.btn.grey{:href => "#"} 3
+              %a.btn.grey{:href => "#"} &hellip;
+              %a.btn.grey{:href => "#"} 16
+            .page-title
+              Pagina 2
+            %div.next
+              %a.btn.grey{:href => "#"}
+                %span.text Volgende
+                %i.fa.fa-chevron-right
+  .default-0.medium-1-4
+    .box.aside
+      .side-header
+        %h2 Mijn pools
+      .pool-list-small
+        %ul
+          %li
+            %a.grey{:href => "#"} The Next Web Leeuwarden
+          %li
+            %a.grey{:href => "#"} The Next Web Leeuwarden
+          %li
+            %a.grey{:href => "#"} The Next Web Leeuwarden
+        %a.btn.green{:href => "#"} Pool aanmaken
+
+%div#modal{:style => "display:none"}
+  %h1 Bij 'Peter & Friends' aansluiten?
+  %p Weet je zeker dat jij je bij 'Peter & Friends' wil aansluiten?
+  .grid-r.modal-btns
+    .default-1.small-1-2
+      %input.btn.green.fullwidth{:type => "submit", :value => "Ja, ik sluit mij aan" }
+    .default-1.small-1-2
+      %input.btn.grey.fullwidth{:type => "submit", :value => "Nee, ik wil verder zoeken"}
+
+%div#modal2{:style => "display:none"}
+  %h1 Wachtwoord 'Peter & Friends'
+  %p Bevestig het wachtwoord van 'Peter & Friends' om toegang te krijgen.
+  .form-search.modalpassword
+    %form{:action => "#"}
+      %button.green
+        %i.fa.fa-chevron-right
+      %div
+        %input{:type => "text", :placeholder => "Wachtwoord"}/
+%script rangeSlider();filterHandle();

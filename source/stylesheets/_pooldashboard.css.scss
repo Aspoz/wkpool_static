@@ -1,0 +1,6 @@
+.pooldashboard-content {
+  padding: 20px;
+  @include respond-to(small) {
+    padding: 30px;
+  }
+}
