@@ -7,6 +7,7 @@
 }
 .view-row > div {
     display: table-cell;
+    vertical-align: middle;
 }
 
 table {
@@ -21,6 +22,16 @@ table {
   td {
     padding: 14px 0;
     vertical-align: middle;
+  }
+
+  .green {
+    color: $color-green-light !important;
+  }
+  .red {
+    color: $color-red-light !important;
+  }
+  .bold {
+    font-weight: $font-weight-bold !important;
   }
 
   thead > tr > th {
@@ -66,18 +77,28 @@ table {
       color: $color-grey-medium;
 
       &:nth-child(1) {
+        color: $color-grey-light;
+        text-align: center;
+        width: 51px;
+
+        &:hover {
+          color: $color-grey-dark;
+        }
+      }
+      &:nth-child(2) {
         text-align: right;
       }
-      &.blackscore {
-        background-color: $color-grey-darker;
-        color: #FFF;
+      &.predict-score {
         padding: 0;
-        width: 120px;
+        width: 130px;
       }
       &:last-child,
       &:nth-last-child(2) {
         text-align: center;
         width: 80px;
+      }
+      &:last-child {
+        color: $color-grey-dark;
       }
     }
   }

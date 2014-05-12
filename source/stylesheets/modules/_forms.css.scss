@@ -175,17 +175,30 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type=number] {
   @include font-size($font-size);
-  background: $color-grey-darker;
-  border:none;
+  border-color: $color-grey-light;
+  border-style: solid;
+  border-width: 1px 1px 3px 1px;
   border-radius: 0;
-  color: #FFF;
+  color: $color-grey-dark;
+  display: block;
   font-family: $font-family;
-  font-weight: $font-weight;
-  height: 50px;
+  font-weight: $font-weight-bold;
+  height: 53px;
+  padding: 0 10px;
   outline: none;
-  text-align: center;
   width: 100%;
   -webkit-appearance: none;
+
+  &:focus {
+    border-color: $color-grey-medium;
+  }
+
+  &.predict {
+    height: 40px;
+    margin: 0 10px;
+    text-align: center;
+    width: 40px;
+  }
 }
 
 
