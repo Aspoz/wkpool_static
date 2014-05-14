@@ -43,6 +43,7 @@
   padding:20px;
   margin-left:40px;
   margin-top:-53px;
+  color:$color-grey-dark;
 
   @include respond-to(small) {
     margin-left:24px;
