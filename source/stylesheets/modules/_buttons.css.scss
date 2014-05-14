@@ -66,11 +66,11 @@ button,
   &.red {
     box-shadow: 0 3px 0 0 $color-red-dark;
     background-color: $color-red-light;
-    color: white;
+    color: #FFF;
     &:hover,
       &:active {
       background-color: $color-red-dark;
-      color: white;
+      color: #FFF;
     }
   }
   
