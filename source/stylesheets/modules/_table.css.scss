@@ -37,12 +37,23 @@ table {
   thead > tr > th {
     font-weight: normal;
     text-align: left;
+    padding-left: 10px;
+
+    @include respond-to(small) {
+      padding-left: 0px;
+    }
   }
 
   tbody > tr > td {
     border: 1px solid $color-grey-light;
     padding-left: 20px;
     padding-right: 20px;
+
+    .view-table {
+      display:table;
+      width:100px;
+      margin:0 auto;
+    }
   }
 
   &.rank {
@@ -69,7 +80,7 @@ table {
 
   &.poule {
 
-    & + .poule {
+    & + .poule, .results {
       margin-top: 30px;
     }
 
@@ -90,7 +101,10 @@ table {
       }
       &.predict-score {
         padding: 0;
-        width: 130px;
+
+        @include respond-to(small) {
+          width: 130px;
+        }
       }
       &:last-child,
       &:nth-last-child(2) {
@@ -105,6 +119,7 @@ table {
 
   .flag {
     background-position: center center;
+    background-repeat: no-repeat;
     width: 70px;
 
     &.brasil {
