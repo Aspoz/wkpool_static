@@ -10,16 +10,9 @@
     padding: 30px;
   }
 }
-.sign-off{
-	background-color: $color-red-light;
-		color: white;
-		&:hover,
-    	&:active {
-      background-color: $color-red-dark;
-    }
-}
+
 .sign-in i{padding-right: 10px;}
-.sign-off i{
+.red i{
 	padding-right: 10px;
 	
 	color: white;}
@@ -27,11 +20,10 @@
 @include respond-to(small) {
 	.sign-in {
 		display: block;
-		
 		width: 100%;
 		float: right;
 	}
-	.sign-off {
+	.red {
 		display: block;
 		width: 100%;
 		float: right;
@@ -41,19 +33,18 @@
 }
 	
 @include respond-to(large) {
-	h2{margin-top: 100px;}
 
 	.sign-in {
 		display: block;
-		margin: 30px;
+		
 		padding-left: 5px;
 		padding-right: 5px;
 		width: 220px;
 		float: right;
 	}
-	.sign-off {
+	.red {
 		display: block;
-		margin: 30px;
+		
 		padding-left: 5px;
 		padding-right: 5px;
 		width: 220px;
@@ -61,7 +52,7 @@
 	}
 	.survey {
 		display: block;
-		margin: 30px;
+		
 		padding-left: 5px;
 		padding-right: 5px;
 		width: 220px;
